@@ -10,9 +10,9 @@ Open the terminal or your Command Prompt and type the following once you have in
 
 - **Install all the packages**
   ```bash
-  yarn install
+  npm install
   ```
 
 - **Run the app**
   ```bash
-  yarn start
+  npm start

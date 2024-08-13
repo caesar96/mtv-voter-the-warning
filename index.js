@@ -46,7 +46,7 @@ async function vote() {
         const randomEmail = `tw_army_${Math.floor(Math.random() * 10000)}_${new Date().getTime()}@gmail.com`;
         console.log("Random email: ", randomEmail);
 
-        await wait(1);
+        // await wait(1);
         await page.type('input[type="email"]', randomEmail);
 
         // Find and click the "Log In" button
@@ -71,8 +71,9 @@ async function vote() {
         // Click the "Submit" button
         const submitButton = await page.$('button.chakra-button.css-ufo2k5');
         if (submitButton) {
-            await wait(2);
+            await wait(1);
             await submitButton.click();
+            console.log("Voted :D")
         } else {
             console.error('Submit button not found!');
             await browser.close();
@@ -82,15 +83,14 @@ async function vote() {
         console.log("Total Votes: ", votes_count);
         votes_count += 1;
 
-        
+        // Wait 3 seconds before repeating
         await wait(3);
 
         // Close the browser
         await browser.close();
 
-
-        // Wait 5 seconds before repeating
-        await await wait(5);
+        
+        // await await wait(5);
     }
 }
 

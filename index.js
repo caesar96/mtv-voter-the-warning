@@ -82,12 +82,14 @@ async function vote() {
         console.log("Total Votes: ", votes_count);
         votes_count += 1;
 
-        // Wait 30 seconds before repeating
+        
         await wait(3);
 
         // Close the browser
         await browser.close();
 
+
+        // Wait 5 seconds before repeating
         await await wait(5);
     }
 }

@@ -5,7 +5,7 @@ async function vote() {
         while (true) {
             // Launch the browser with incognito mode using --incognito argument
             const browser = await puppeteer.launch({
-                headless: "new",
+                headless: false,
                 args: ['--incognito'],
                 defaultViewport: null
             });
@@ -62,7 +62,7 @@ async function vote() {
             await page.waitForSelector('input[type="email"]', { hidden: true });
     
             // Click the "Add Vote" button 10 times
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 20; i++) {
                 await addVoteButton.click();
             }
     

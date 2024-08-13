@@ -94,7 +94,11 @@ async function vote() {
     }
 }
 
-vote().catch(console.error);
+vote().catch( async (error) => {
+    console.log(error);
+
+    await vote();
+});
 
 function wait(time = 1) {
     return new Promise(resolve => setTimeout(resolve, time * 1000));

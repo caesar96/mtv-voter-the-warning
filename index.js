@@ -78,7 +78,7 @@ async function vote() {
             await page.waitForSelector('input[type="email"]', { hidden: true });
 
             // Click the "Add Vote" button 20 times
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 21; i++) {
                 await addVoteButton.click();
             }
 
